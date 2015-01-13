@@ -40,6 +40,25 @@ def another_sort_list():
 
 	Hint: Output is like [{1: 'afmeniyhqvkdxrlocswgjpbtu', "sum": "282"}, {2: jdtprombhueifnygskvclw', "sum": "283"}, ....so on]
 	"""
+        
+
+        new_dict = dict()
+        #Preparing the list like this   {'a': 1, 'c': 3, 'b': 2, 'e': 5, 'd': 4, 'g': 7 and so on
+        [new_dict.update({element[1]:element[0]})for element in zip(range(1,27), map(chr,range(ord("a"),ord("z")+1)))]
+
+
+
+        h = lambda x : sum([new_dict[element] for element in x ])
+
+        
+        [element.update({"sum": h(element.values()[0])}) for element in shivam_dict]
+
+
+
+        return shivam_dict
+
+
+
 
 def lambda__():
 	"""
